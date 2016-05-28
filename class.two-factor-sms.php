@@ -141,7 +141,7 @@ class Two_Factor_Sms extends Two_Factor_Provider {
 	 * @return boolean
 	 */
 	public function generate_and_sms_token( $user ) {
-		require_once( TWO_FACTOR_SMS_DIR . 'includes/Twilio/Services/Twilio.php' );
+		require_once( TWL_PATH . 'twilio-php/Services/Twilio.php' );
 
 		$sid      = get_user_meta( $user->ID, self::ACCOUNT_SID_META_KEY,     true );
 		$token    = get_user_meta( $user->ID, self::AUTH_TOKEN_META_KEY,      true );
